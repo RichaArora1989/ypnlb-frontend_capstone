@@ -11,8 +11,8 @@ const passport = require('passport');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const JWT_SECRET = process.env.JWT_SECRET;
-
+// const JWT_SECRET = process.env.JWT_SECRET;
+     const JWT_SECRET = process.env.JWT_SECRET || "ITSISJWTPASSWORDKEYFORAUTHENTICATION";
 router.use(session({
     secret: 'keyboard cat',
     resave: false,
